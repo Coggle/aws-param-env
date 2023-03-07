@@ -1,6 +1,6 @@
 {
   "name": "aws-param-env-sdkv3",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "Module for synchronously loading AWS SSM Parameter Store values into environment variables, fork of aws-param-env using awsdkv3",
   "main": "lib/index.js",
   "keywords": [
