@@ -1,7 +1,7 @@
 {
-  "name": "aws-param-env",
+  "name": "aws-param-env-sdkv3",
   "version": "2.1.0",
-  "description": "Module for synchronously loading AWS SSM Parameter Store values into environment variables",
+  "description": "Module for synchronously loading AWS SSM Parameter Store values into environment variables, fork of aws-param-env using awsdkv3",
   "main": "lib/index.js",
   "keywords": [
     "AWS",
@@ -30,18 +30,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/vandium-io/aws-param-env.git"
+    "url": "https://github.com/coggle/aws-param-env.git"
   },
   "engines": {
     "node": ">=10.16"
   },
-  "author": "Vandium Software Inc.",
+  "author": "Vandium Software Inc., Coggle",
   "license": "BSD-3-Clause",
   "files": [
     "/lib"
   ],
   "devDependencies": {
-    "aws-sdk": "^2.584.0",
     "chai": "^4.1.2",
     "env-restorer": "^1.0.0",
     "mocha": "^6.2.2",
@@ -50,6 +49,6 @@
     "sinon": "^7.5.0"
   },
   "dependencies": {
-    "aws-param-store": "^3.2.0"
+    "aws-param-store-sdkv3": "^4.0.0"
   }
 }

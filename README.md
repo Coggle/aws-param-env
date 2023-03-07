@@ -1,9 +1,10 @@
-[![Build Status](https://travis-ci.org/vandium-io/aws-param-env.svg?branch=master)](https://travis-ci.org/vandium-io/aws-param-env)
-[![npm version](https://badge.fury.io/js/aws-param-env.svg)](https://badge.fury.io/js/aws-param-env)
+[![npm version](https://badge.fury.io/js/aws-param-env-sdkv3.svg)](https://badge.fury.io/js/aws-param-env-sdkv3)
 
 # aws-param-env
 
 Module for loading parameter-store values from AWS SSM into environment variables
+
+This fork has been updated to depend on [aws-param-store-sdkv3](https://github.com/coggle/aws-param-store), in order to support the AWS SDK v3 (and now depends only on the client-ssm module of the sdk).
 
 ## Features
 * Loads parameters by path
@@ -15,14 +16,12 @@ Module for loading parameter-store values from AWS SSM into environment variable
 ## Installation
 Install via npm.
 
-	npm install aws-param-env --save
-
-**Note**: `aws-param-env` does not contain a dependency on `aws-sdk` and it should be installed within your application.
+	npm install aws-param-env-sdkv3 --save
 
 ## Getting Started
 
 ```js
-const awsParamEnv = require( 'aws-param-env' );
+const awsParamEnv = require( 'aws-param-env-sdkv3' );
 
 awsParamEnv.load( '/my-service-path-in-ssm/env' );
 ```
@@ -31,7 +30,7 @@ If your AWS region is not set in your environment variables, then it can be set 
 options when calling `load()`:
 
 ```js
-const awsParamEnv = require( 'aws-param-env' );
+const awsParamEnv = require( 'aws-param-env-sdkv3' );
 
 awsParamEnv.load( '/my-service-path-in-ssm/env', { region: 'us-east-1' } );
 ```
@@ -41,15 +40,11 @@ To load the environment variables automatically from a path, set the `AWS_SSM_EN
 
 ```js
 // AWS_SSM_ENV_PATH = '/my-services/service1/env', AWS_REGION='us-east-1'
-require( 'aws-param-env' );
+require( 'aws-param-env-sdkv3' );
 
 // environment variables are automatically loaded from the SSM parameter store
 ```
 
-
-## Feedback
-
-We'd love to get feedback on how to make this tool better. Feel free to contact us at `feedback@vandium.io`
 
 ## License
 
